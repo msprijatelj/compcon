@@ -164,6 +164,7 @@ export default Vue.extend({
         '',
         'code'
       )
+      console.log(authorizationCode)
       this.patreonAuthCode = authorizationCode
     },
   },

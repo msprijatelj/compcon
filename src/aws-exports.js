@@ -17,12 +17,24 @@ const awsmobile = {
             "name": "itchOauth",
             "endpoint": "https://rde6yv0phf.execute-api.us-east-1.amazonaws.com/staging",
             "region": "us-east-1"
+        },
+        {
+            "name": "patreonsnowflake",
+            "endpoint": "https://tit1dpxwz4.execute-api.us-east-1.amazonaws.com/staging",
+            "region": "us-east-1"
         }
     ],
     "aws_cognito_region": "us-east-1",
     "aws_user_pools_id": "us-east-1_Opk2nQAEb",
     "aws_user_pools_web_client_id": "611vsmduourtkeafa6bdmn0gpb",
-    "oauth": {}
+    "oauth": {},
+    "aws_dynamodb_all_tables_region": "us-east-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "patreonsnowflakes-staging",
+            "region": "us-east-1"
+        }
+    ]
 };
 
 

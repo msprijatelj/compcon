@@ -35,12 +35,12 @@
         "GraphQLAPIEndpointOutput": "https://ewy4qo5mj5aalhpdr26udofkxq.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-lualjo56wvffxlekmjmkmbgj2m"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.823Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apicompcon"
       },
-      "lastPushDirHash": "Xh2CDhTmAxZLIXwDWynv4HxdT5k="
+      "lastPushDirHash": "m36AaFlLdtGY6W3DBgERr4yM0Xw="
     },
     "patreonOauth": {
       "service": "API Gateway",
@@ -60,7 +60,7 @@
         "RootUrl": "https://dq07um7f66.execute-api.us-east-1.amazonaws.com/staging",
         "ApiId": "dq07um7f66"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.827Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/api/patreonOauth-cloudformation-template.json",
         "logicalId": "apipatreonOauth"
@@ -85,12 +85,37 @@
         "RootUrl": "https://rde6yv0phf.execute-api.us-east-1.amazonaws.com/staging",
         "ApiId": "rde6yv0phf"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.829Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/api/itchOauth-cloudformation-template.json",
         "logicalId": "apiitchOauth"
       },
       "lastPushDirHash": "UDOBToFMauIfkGbMOYIJlZDsMVA="
+    },
+    "patreonsnowflake": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "createPatreonSnowflake",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/api/patreonsnowflake-cloudformation-template.json",
+        "logicalId": "apipatreonsnowflake"
+      },
+      "lastPushTimeStamp": "2021-01-24T03:21:09.831Z",
+      "output": {
+        "ApiName": "patreonsnowflake",
+        "RootUrl": "https://tit1dpxwz4.execute-api.us-east-1.amazonaws.com/staging",
+        "ApiId": "tit1dpxwz4"
+      },
+      "lastPushDirHash": "sY5vb+e7DYrhJQpCjKKTYdb0Nas="
     }
   },
   "auth": {
@@ -106,7 +131,7 @@
         "AppClientID": "6du06h85kvormfrajnmb8mvq4g",
         "UserPoolName": "compcon"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.833Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/auth/compcon-cloudformation-template.yml",
         "logicalId": "authcompcon"
@@ -126,7 +151,7 @@
         "Name": "ccSignupChallenge-staging",
         "LambdaExecutionRole": "compconLambdaRole3bdc161e-staging"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.834Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/function/ccSignupChallenge-cloudformation-template.json",
         "logicalId": "functionccSignupChallenge"
@@ -147,7 +172,7 @@
         "Name": "patreonOauthL-staging",
         "LambdaExecutionRole": "compconLambdaRole18eaa0af-staging"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.836Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/function/patreonOauthL-cloudformation-template.json",
         "logicalId": "functionpatreonOauthL"
@@ -168,7 +193,7 @@
         "Name": "itchOauthL-staging",
         "LambdaExecutionRole": "compconLambdaRole423796f6-staging"
       },
-      "lastPushTimeStamp": "2021-01-24T00:00:25.901Z",
+      "lastPushTimeStamp": "2021-01-24T03:21:09.837Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/function/itchOauthL-cloudformation-template.json",
         "logicalId": "functionitchOauthL"
@@ -177,6 +202,60 @@
       "lastPackageTimeStamp": "2021-01-23T23:59:24.786Z",
       "distZipFilename": "itchOauthL-73644e3532427a534b31-build.zip",
       "lastPushDirHash": "egb+fmkLGN81naqRdt8Ndam5mrE="
+    },
+    "createPatreonSnowflake": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "patreonsnowflakes",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ],
+      "lastBuildTimeStamp": "2021-01-24T03:20:00.341Z",
+      "lastPackageTimeStamp": "2021-01-24T03:20:00.821Z",
+      "distZipFilename": "createPatreonSnowflake-2b2f715148756a527954-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/function/createPatreonSnowflake-cloudformation-template.json",
+        "logicalId": "functioncreatePatreonSnowflake"
+      },
+      "lastPushTimeStamp": "2021-01-24T03:21:09.844Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:587363476764:function:createPatreonSnowflake-staging",
+        "Name": "createPatreonSnowflake-staging",
+        "LambdaExecutionRole": "compconLambdaRolec0cab66c-staging"
+      },
+      "lastPushDirHash": "M79fUmF355lqqsud79nCvgKEeNU="
+    }
+  },
+  "storage": {
+    "patreonsnowflakes": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-compcon-staging-215530-deployment/amplify-cfn-templates/storage/patreonsnowflakes-cloudformation-template.json",
+        "logicalId": "storagepatreonsnowflakes"
+      },
+      "lastPushTimeStamp": "2021-01-24T03:21:09.840Z",
+      "output": {
+        "PartitionKeyName": "snowflake",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:dynamodb:us-east-1:587363476764:table/patreonsnowflakes-staging",
+        "StreamArn": "arn:aws:dynamodb:us-east-1:587363476764:table/patreonsnowflakes-staging/stream/2021-01-24T00:43:55.406",
+        "PartitionKeyType": "S",
+        "Name": "patreonsnowflakes-staging"
+      },
+      "lastPushDirHash": "p4RoyDJbowVPKxPUEHM9Hi95pWc="
     }
   }
 }
